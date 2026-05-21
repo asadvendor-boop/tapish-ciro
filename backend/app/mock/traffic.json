@@ -1,0 +1,24 @@
+{
+  "metadata": {"source": "mock_traffic_api", "note": "SYNTHETIC DATA"},
+  "timestamp": "2026-05-12T14:30:00+05:00",
+  "roads": [
+    {"road": "GT Road (Shahdara to Data Darbar)", "segment": "shahdara_to_badami_bagh", "congestion_level": "moderate", "congestion_index": 0.55, "avg_speed_kmh": 25, "baseline_speed_kmh": 45, "incidents": []},
+    {"road": "GT Road (Data Darbar to Mall Road)", "segment": "data_darbar_to_mall", "congestion_level": "heavy", "congestion_index": 0.78, "avg_speed_kmh": 12, "baseline_speed_kmh": 40, "incidents": ["road_work_near_railway_station"]},
+    {"road": "Mall Road", "segment": "mall_road_full", "congestion_level": "moderate", "congestion_index": 0.50, "avg_speed_kmh": 30, "baseline_speed_kmh": 50, "incidents": []},
+    {"road": "Shahrah-e-Quaid-e-Azam (The Mall)", "segment": "the_mall", "congestion_level": "light", "congestion_index": 0.30, "avg_speed_kmh": 40, "baseline_speed_kmh": 50, "incidents": []},
+    {"road": "Ferozepur Road", "segment": "ferozepur_full", "congestion_level": "moderate", "congestion_index": 0.52, "avg_speed_kmh": 28, "baseline_speed_kmh": 50, "incidents": []},
+    {"road": "Canal Road", "segment": "canal_full", "congestion_level": "light", "congestion_index": 0.25, "avg_speed_kmh": 50, "baseline_speed_kmh": 60, "incidents": []},
+    {"road": "Multan Road", "segment": "multan_road", "congestion_level": "moderate", "congestion_index": 0.48, "avg_speed_kmh": 30, "baseline_speed_kmh": 50, "incidents": []},
+    {"road": "Jail Road", "segment": "jail_road", "congestion_level": "light", "congestion_index": 0.22, "avg_speed_kmh": 45, "baseline_speed_kmh": 50, "incidents": []},
+    {"road": "Walled City Inner Streets", "segment": "walled_city_inner", "congestion_level": "heavy", "congestion_index": 0.85, "avg_speed_kmh": 5, "baseline_speed_kmh": 15, "incidents": ["narrow_streets", "pedestrian_heavy", "market_day"]},
+    {"road": "Misri Shah Road", "segment": "misri_shah", "congestion_level": "moderate", "congestion_index": 0.60, "avg_speed_kmh": 20, "baseline_speed_kmh": 35, "incidents": []}
+  ],
+  "scenario_6_congestion_spike": {
+    "trigger": "public_alert_walled_city",
+    "affected_road": "GT Road (Data Darbar to Mall Road)",
+    "new_congestion_index": 0.95,
+    "new_avg_speed_kmh": 3,
+    "reason": "Mass evacuation from Walled City after public alert caused traffic gridlock on GT Road",
+    "alternative_routes": ["Canal Road", "Multan Road via Garhi Shahu"]
+  }
+}

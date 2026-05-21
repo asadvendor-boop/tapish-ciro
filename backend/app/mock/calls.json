@@ -1,0 +1,27 @@
+{
+  "metadata": {"source": "mock_rescue_1122", "note": "SYNTHETIC DATA — simulates typical Lahore rescue call patterns"},
+  "timestamp": "2026-05-14T14:30:00+05:00",
+  "hourly_calls": {
+    "walled_city": [2, 3, 2, 4, 5, 8, 12, 18, 25, 22, 15, 10],
+    "misri_shah": [1, 1, 2, 2, 3, 4, 5, 6, 8, 7, 5, 3],
+    "shahdara": [1, 1, 1, 2, 2, 3, 4, 5, 6, 5, 4, 3],
+    "baghbanpura": [0, 1, 1, 1, 2, 2, 3, 4, 5, 4, 3, 2],
+    "dha_phase_5": [1, 1, 1, 1, 2, 2, 3, 4, 5, 6, 5, 3],
+    "gulberg_iii": [1, 1, 1, 2, 2, 3, 4, 5, 7, 8, 6, 4],
+    "model_town": [0, 1, 1, 1, 2, 2, 3, 3, 4, 4, 3, 2],
+    "cantt": [1, 1, 1, 1, 2, 2, 3, 3, 4, 3, 2, 2],
+    "liberty_market": [1, 1, 2, 2, 3, 4, 5, 6, 8, 10, 7, 5]
+  },
+  "hours_labels": ["06:00","07:00","08:00","09:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00"],
+  "call_types": {
+    "walled_city": {"heatstroke": 18, "dehydration": 5, "collapse": 2, "fire": 1, "other": 2},
+    "misri_shah": {"heatstroke": 6, "dehydration": 3, "collapse": 1, "other": 1},
+    "dha_phase_5": {"power_related": 4, "elevator_stuck": 2, "heatstroke": 2, "other": 1},
+    "gulberg_iii": {"accident": 5, "heatstroke": 4, "dehydration": 2, "fire": 1, "other": 2},
+    "liberty_market": {"accident": 6, "heatstroke": 3, "dehydration": 2, "other": 1},
+    "model_town": {"accident": 2, "heatstroke": 3, "power_related": 1, "other": 1},
+    "cantt": {"accident": 3, "heatstroke": 2, "other": 1},
+    "shahdara": {"heatstroke": 4, "dehydration": 2, "flood_related": 1, "other": 1},
+    "baghbanpura": {"heatstroke": 3, "dehydration": 2, "other": 1}
+  }
+}

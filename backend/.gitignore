@@ -1,0 +1,13 @@
+.env
+*.json
+!app/mock/*.json
+!app/mock/*.geojson
+__pycache__/
+*.pyc
+*.db
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+tts_output/

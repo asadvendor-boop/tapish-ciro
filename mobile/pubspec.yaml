@@ -1,0 +1,64 @@
+name: tapish_app
+description: "TAPISH — Agentic Crisis Response for Lahore Heatwaves"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+
+  # Networking
+  web_socket_channel: ^3.0.1
+  http: ^1.2.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Typography
+  google_fonts: ^6.2.1
+
+  # Firebase
+  firebase_core: ^3.6.0
+  firebase_messaging: ^15.1.4
+
+  # Utilities
+  intl: ^0.19.0
+  shimmer: ^3.0.0
+
+  # Maps
+  google_maps_flutter: ^2.10.0
+
+  # Audio for mosque TTS playback
+  audioplayers: ^6.1.0
+
+  # Local notifications for crisis alerts
+  flutter_local_notifications: ^18.0.1
+
+  # Citizen field reporting
+  image_picker: ^1.1.2
+  geolocator: ^13.0.2
+  record: ^6.2.0
+  path_provider: ^2.1.5
+
+  # Session persistence (login, alerts inbox)
+  shared_preferences: ^2.3.0
+
+  # Citizen auth (Tapish Awaaz — Google Sign-In)
+  google_sign_in: ^6.2.1
+  firebase_auth: ^5.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/

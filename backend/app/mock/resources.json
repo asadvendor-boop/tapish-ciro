@@ -1,0 +1,39 @@
+[
+  {"id":"amb_001","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.5204,"lng":74.3587,"label":"Mayo Hospital"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_002","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.5150,"lng":74.3450,"label":"Rescue 1122 Anarkali Station"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_003","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.5600,"lng":74.3500,"label":"Rescue 1122 Shahdara Station"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_004","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.5100,"lng":74.3300,"label":"Rescue 1122 Data Darbar Station"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_005","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.4800,"lng":74.3700,"label":"Rescue 1122 Iqbal Town Station"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_006","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.4600,"lng":74.4100,"label":"Rescue 1122 Township Station"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_007","type":"ambulance","operator":"edhi","current_location":{"lat":31.5250,"lng":74.3550,"label":"Edhi Center McLeod Road"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_008","type":"ambulance","operator":"edhi","current_location":{"lat":31.5500,"lng":74.3400,"label":"Edhi Center GT Road"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_009","type":"ambulance","operator":"edhi","current_location":{"lat":31.4700,"lng":74.3900,"label":"Edhi Center Model Town"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_010","type":"ambulance","operator":"chhipa","current_location":{"lat":31.5300,"lng":74.3600,"label":"Chhipa Center Lahore"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_011","type":"ambulance","operator":"chhipa","current_location":{"lat":31.5000,"lng":74.3500,"label":"Chhipa Garhi Shahu"},"status":"available","capacity":2,"assigned_crisis":null},
+  {"id":"amb_012","type":"ambulance","operator":"rescue_1122","current_location":{"lat":31.4500,"lng":74.3500,"label":"Rescue 1122 DHA Station"},"status":"available","capacity":2,"assigned_crisis":null},
+
+  {"id":"gen_001","type":"generator","operator":"lesco","current_location":{"lat":31.5200,"lng":74.3500,"label":"LESCO Grid Station Lahore"},"status":"available","capacity":500,"assigned_crisis":null},
+  {"id":"gen_002","type":"generator","operator":"lesco","current_location":{"lat":31.4700,"lng":74.3600,"label":"LESCO Gulberg Sub-station"},"status":"available","capacity":500,"assigned_crisis":null},
+  {"id":"gen_003","type":"generator","operator":"lesco","current_location":{"lat":31.5500,"lng":74.3300,"label":"LESCO Shahdara Sub-station"},"status":"available","capacity":300,"assigned_crisis":null},
+  {"id":"gen_004","type":"generator","operator":"lesco","current_location":{"lat":31.4500,"lng":74.4000,"label":"LESCO DHA Grid Station"},"status":"available","capacity":500,"assigned_crisis":null},
+  {"id":"gen_005","type":"generator","operator":"lesco","current_location":{"lat":31.5100,"lng":74.3200,"label":"LESCO Mughalpura Station"},"status":"available","capacity":300,"assigned_crisis":null},
+  {"id":"gen_006","type":"generator","operator":"lesco","current_location":{"lat":31.4900,"lng":74.3800,"label":"LESCO Mobile Unit"},"status":"available","capacity":200,"assigned_crisis":null},
+
+  {"id":"wt_001","type":"water_tanker","operator":"wasa","current_location":{"lat":31.5180,"lng":74.3520,"label":"WASA Depot Multan Road"},"status":"available","capacity":5000,"assigned_crisis":null},
+  {"id":"wt_002","type":"water_tanker","operator":"wasa","current_location":{"lat":31.5400,"lng":74.3450,"label":"WASA Depot GT Road"},"status":"available","capacity":5000,"assigned_crisis":null},
+  {"id":"wt_003","type":"water_tanker","operator":"wasa","current_location":{"lat":31.4650,"lng":74.3750,"label":"WASA Depot Ferozepur Road"},"status":"available","capacity":5000,"assigned_crisis":null},
+  {"id":"wt_004","type":"water_tanker","operator":"wasa","current_location":{"lat":31.5100,"lng":74.3100,"label":"WASA Depot Ravi Road"},"status":"available","capacity":3000,"assigned_crisis":null},
+  {"id":"wt_005","type":"water_tanker","operator":"wasa","current_location":{"lat":31.4800,"lng":74.4050,"label":"WASA Depot Township"},"status":"available","capacity":3000,"assigned_crisis":null},
+  {"id":"wt_006","type":"water_tanker","operator":"wasa","current_location":{"lat":31.5350,"lng":74.3650,"label":"WASA Mobile Unit"},"status":"available","capacity":2000,"assigned_crisis":null},
+  {"id":"wt_007","type":"water_tanker","operator":"wasa","current_location":{"lat":31.4550,"lng":74.3550,"label":"WASA Depot Cantt"},"status":"available","capacity":5000,"assigned_crisis":null},
+  {"id":"wt_008","type":"water_tanker","operator":"wasa","current_location":{"lat":31.5250,"lng":74.3250,"label":"WASA Depot Badami Bagh"},"status":"available","capacity":3000,"assigned_crisis":null},
+
+  {"id":"rt_001","type":"rescue_team","operator":"rescue_1122","current_location":{"lat":31.5200,"lng":74.3580,"label":"Rescue 1122 HQ Lahore"},"status":"available","capacity":6,"assigned_crisis":null},
+  {"id":"rt_002","type":"rescue_team","operator":"rescue_1122","current_location":{"lat":31.5450,"lng":74.3380,"label":"Rescue 1122 North Station"},"status":"available","capacity":6,"assigned_crisis":null},
+  {"id":"rt_003","type":"rescue_team","operator":"rescue_1122","current_location":{"lat":31.4750,"lng":74.3650,"label":"Rescue 1122 South Station"},"status":"available","capacity":6,"assigned_crisis":null},
+  {"id":"rt_004","type":"rescue_team","operator":"punjab_health","current_location":{"lat":31.5150,"lng":74.3480,"label":"Punjab Health Rapid Response"},"status":"available","capacity":4,"assigned_crisis":null},
+
+  {"id":"drone_001","type":"drone","operator":"rescue_1122","current_location":{"lat":31.5200,"lng":74.3580,"label":"Rescue 1122 HQ Drone Pad"},"status":"available","capacity":1,"assigned_crisis":null},
+  {"id":"drone_002","type":"drone","operator":"rescue_1122","current_location":{"lat":31.4500,"lng":74.3500,"label":"DHA Drone Pad"},"status":"available","capacity":1,"assigned_crisis":null},
+  {"id":"drone_003","type":"drone","operator":"pdma","current_location":{"lat":31.5600,"lng":74.3500,"label":"PDMA Shahdara Drone Station"},"status":"available","capacity":1,"assigned_crisis":null}
+]

@@ -1,0 +1,46 @@
+{
+  "metadata": {"source": "mock_weather_api", "generated": "2026-05-12", "note": "SYNTHETIC DATA — see SYNTHETIC_DATA_NOTICE.md"},
+  "lahore_overview": {
+    "date": "2026-05-12",
+    "sunrise": "05:32",
+    "sunset": "19:05",
+    "uv_index": 11,
+    "air_quality_index": 185,
+    "wind_speed_kmh": 8,
+    "wind_direction": "SW"
+  },
+  "hourly": [
+    {"hour":"06:00","temp_c":34.2,"humidity_pct":55,"heat_index":37.1,"feels_like":38.0,"cloud_cover":5},
+    {"hour":"07:00","temp_c":35.8,"humidity_pct":52,"heat_index":39.0,"feels_like":40.2,"cloud_cover":3},
+    {"hour":"08:00","temp_c":37.5,"humidity_pct":50,"heat_index":41.2,"feels_like":42.5,"cloud_cover":2},
+    {"hour":"09:00","temp_c":39.1,"humidity_pct":48,"heat_index":43.5,"feels_like":45.0,"cloud_cover":0},
+    {"hour":"10:00","temp_c":40.8,"humidity_pct":45,"heat_index":45.8,"feels_like":47.2,"cloud_cover":0},
+    {"hour":"11:00","temp_c":42.3,"humidity_pct":42,"heat_index":47.5,"feels_like":49.0,"cloud_cover":0},
+    {"hour":"12:00","temp_c":44.1,"humidity_pct":40,"heat_index":49.8,"feels_like":51.5,"cloud_cover":0},
+    {"hour":"13:00","temp_c":45.5,"humidity_pct":38,"heat_index":51.2,"feels_like":53.0,"cloud_cover":0},
+    {"hour":"14:00","temp_c":47.2,"humidity_pct":35,"heat_index":53.5,"feels_like":55.8,"cloud_cover":0},
+    {"hour":"15:00","temp_c":48.1,"humidity_pct":33,"heat_index":54.8,"feels_like":57.0,"cloud_cover":0},
+    {"hour":"16:00","temp_c":47.5,"humidity_pct":34,"heat_index":53.9,"feels_like":56.2,"cloud_cover":5},
+    {"hour":"17:00","temp_c":46.2,"humidity_pct":36,"heat_index":52.1,"feels_like":54.5,"cloud_cover":8},
+    {"hour":"18:00","temp_c":44.0,"humidity_pct":40,"heat_index":49.5,"feels_like":51.0,"cloud_cover":10},
+    {"hour":"19:00","temp_c":41.5,"humidity_pct":45,"heat_index":46.2,"feels_like":48.0,"cloud_cover":12},
+    {"hour":"20:00","temp_c":39.8,"humidity_pct":48,"heat_index":44.0,"feels_like":45.5,"cloud_cover":10},
+    {"hour":"21:00","temp_c":38.2,"humidity_pct":50,"heat_index":42.1,"feels_like":43.5,"cloud_cover":8},
+    {"hour":"22:00","temp_c":37.0,"humidity_pct":52,"heat_index":40.5,"feels_like":41.8,"cloud_cover":5},
+    {"hour":"23:00","temp_c":36.1,"humidity_pct":54,"heat_index":39.2,"feels_like":40.5,"cloud_cover":5}
+  ],
+  "neighborhoods": {
+    "walled_city": {"peak_temp_c": 49.1, "avg_humidity": 38, "heat_island_bonus": 3.5, "tree_cover_pct": 2},
+    "misri_shah": {"peak_temp_c": 48.0, "avg_humidity": 40, "heat_island_bonus": 2.8, "tree_cover_pct": 5},
+    "shahdara": {"peak_temp_c": 47.5, "avg_humidity": 42, "heat_island_bonus": 2.0, "tree_cover_pct": 8},
+    "baghbanpura": {"peak_temp_c": 47.0, "avg_humidity": 41, "heat_island_bonus": 1.8, "tree_cover_pct": 10},
+    "dha_phase_5": {"peak_temp_c": 44.5, "avg_humidity": 35, "heat_island_bonus": 0.5, "tree_cover_pct": 25},
+    "gulberg_iii": {"peak_temp_c": 44.0, "avg_humidity": 36, "heat_island_bonus": 0.8, "tree_cover_pct": 22},
+    "model_town": {"peak_temp_c": 43.5, "avg_humidity": 38, "heat_island_bonus": 0.3, "tree_cover_pct": 30},
+    "cantt": {"peak_temp_c": 43.8, "avg_humidity": 37, "heat_island_bonus": 0.6, "tree_cover_pct": 28}
+  },
+  "alerts": [
+    {"type": "extreme_heat_warning", "issued_at": "2026-05-12T10:00:00+05:00", "valid_until": "2026-05-12T20:00:00+05:00", "message": "Extreme heat warning for Lahore. Peak temperatures expected to exceed 47C between 2-4 PM."},
+    {"type": "heat_index_danger", "issued_at": "2026-05-12T13:00:00+05:00", "valid_until": "2026-05-12T18:00:00+05:00", "message": "Heat index above 54C — DANGEROUS. Risk of heatstroke for outdoor workers and vulnerable populations."}
+  ]
+}

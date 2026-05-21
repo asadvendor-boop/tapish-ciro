@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* Urdu / Arabic script — use Noto Naskh Arabic everywhere */
+:lang(ur), [dir="rtl"], .font-urdu {
+  font-family: var(--font-urdu, 'Noto Naskh Arabic'), 'Noto Naskh Arabic', sans-serif !important;
+}
+
+:root {
+  --bg: #050510;
+  --surface: #0a0c1a;
+  --panel: #0d1025;
+  --border: rgba(255,255,255,0.06);
+  --heat: #ff6d00;
+  --teal: #00e5ff;
+  --text: #e8e8f0;
+  --muted: #5c6080;
+  --glass: rgba(10,14,30,0.65);
+  --glass-border: rgba(255,255,255,0.08);
+  --glass-strong: rgba(8,12,24,0.82);
+}
+
+body { background: var(--bg); color: var(--text); font-family: 'JetBrains Mono','monospace'; margin:0; overflow:hidden; }
+
+::-webkit-scrollbar { width:4px; }
+::-webkit-scrollbar-track { background:transparent; }
+::-webkit-scrollbar-thumb { background:#1a1d35; border-radius:2px; }
+::-webkit-scrollbar-thumb:hover { background:#252a48; }
+
+/* ══════════════ GLASSMORPHISM ══════════════ */
+.glass-panel {
+  background: var(--glass);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid var(--glass-border);
+}
+.glass-strong {
+  background: var(--glass-strong);
+  backdrop-filter: blur(24px) saturate(1.6);
+  -webkit-backdrop-filter: blur(24px) saturate(1.6);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ══════════════ HEADER ══════════════ */
+.header-bar {
+  background: linear-gradient(180deg, rgba(15,18,35,0.95) 0%, rgba(8,10,20,0.98) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,109,0,0.12);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4), 0 1px 0 rgba(255,109,0,0.06);
+}
+
+/* ══════════════ TICKER ══════════════ */
+@keyframes tickerScroll { 0%{transform:translateX(100%)} 100%{transform:translateX(-100%)} }
+.ticker-scroll { animation: tickerScroll 25s linear infinite; }
+.ticker-bar {
+  background: linear-gradient(90deg, rgba(40,0,0,0.9) 0%, rgba(30,5,0,0.85) 50%, rgba(40,0,0,0.9) 100%);
+  border-top: 1px solid rgba(255,60,0,0.15);
+  border-bottom: 1px solid rgba(255,60,0,0.15);
+  box-shadow: inset 0 0 30px rgba(255,60,0,0.05);
+}
+
+/* ══════════════ GLOW EFFECTS ══════════════ */
+.glow-orange { box-shadow: 0 0 20px rgba(255,109,0,0.12), 0 0 40px rgba(255,109,0,0.04); }
+.glow-sm { box-shadow: 0 0 12px rgba(255,109,0,0.08); }
+.glow-teal { box-shadow: 0 0 15px rgba(0,229,255,0.1); }
+.glow-red { box-shadow: 0 0 15px rgba(255,60,0,0.12); }
+
+/* ══════════════ LIVE PULSE ══════════════ */
+@keyframes pulse2 { 0%,100%{opacity:1} 50%{opacity:.3} }
+.live-dot { animation: pulse2 1.5s ease infinite; }
+
+@keyframes borderPulse { 0%,100%{border-color:rgba(255,109,0,0.12)} 50%{border-color:rgba(255,109,0,0.25)} }
+.border-pulse { animation: borderPulse 3s ease infinite; }
+
+/* ══════════════ SHIMMER ══════════════ */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.shimmer-bg {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.03) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 3s ease infinite;
+}
+
+/* ══════════════ METRICS RIBBON ══════════════ */
+.metric-cell {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, transparent 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-right: 1px solid var(--border);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.metric-cell::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.06), transparent);
+}
+.metric-cell:hover {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.01) 100%);
+}
+.metric-cell:last-child { border-right: none; }
+
+/* ══════════════ SPARKLINE ══════════════ */
+.sparkline { display:flex; align-items:flex-end; gap:1px; height:20px; }
+.sparkline-bar { width:3px; border-radius:1px 1px 0 0; min-height:2px; transition: height .3s ease; }
+@keyframes sparkGrow { 0%{transform:scaleY(0)} 100%{transform:scaleY(1)} }
+.sparkline-bar { transform-origin: bottom; animation: sparkGrow 0.6s ease forwards; }
+
+/* ══════════════ TABLE ══════════════ */
+.incident-table { width:100%; border-collapse:collapse; font-size:11px; }
+.incident-table th { text-align:left; padding:5px 8px; color:#5c6080; font-weight:600; font-size:10px; text-transform:uppercase; letter-spacing:.05em; border-bottom:1px solid var(--border); cursor:pointer; transition: color 0.2s; }
+.incident-table th:hover { color: var(--heat); }
+.incident-table td { padding:5px 8px; border-bottom:1px solid rgba(255,255,255,0.02); transition: background 0.2s; }
+.incident-table tr:nth-child(even) { background: rgba(255,255,255,0.012); }
+.incident-table tr:hover { background: rgba(255,109,0,0.05); }
+.incident-table tr { transition: all 0.2s ease; }
+
+/* ══════════════ SEVERITY BADGES ══════════════ */
+.sev-critical { background: rgba(255,61,0,0.15); color:#ff3d00; padding:2px 8px; border-radius:4px; font-size:9px; font-weight:700; letter-spacing:0.03em; border:1px solid rgba(255,61,0,0.2); text-shadow: 0 0 8px rgba(255,61,0,0.3); }
+.sev-high { background: rgba(255,109,0,0.15); color:#ff6d00; padding:2px 8px; border-radius:4px; font-size:9px; font-weight:700; letter-spacing:0.03em; border:1px solid rgba(255,109,0,0.2); }
+.sev-medium { background: rgba(255,193,7,0.12); color:#ffc107; padding:2px 8px; border-radius:4px; font-size:9px; font-weight:700; letter-spacing:0.03em; border:1px solid rgba(255,193,7,0.15); }
+.sev-low { background: rgba(0,200,83,0.12); color:#00c853; padding:2px 8px; border-radius:4px; font-size:9px; font-weight:700; letter-spacing:0.03em; border:1px solid rgba(0,200,83,0.15); }
+
+/* ══════════════ WATERFALL ══════════════ */
+.wf-row { display:flex; align-items:center; gap:4px; height:24px; }
+.wf-label { width:110px; font-size:10px; color:#8890b0; display:flex; align-items:center; flex-shrink:0; transition: color 0.2s; overflow:hidden; }
+.wf-row:hover .wf-label { color: #c0c8e0; }
+.wf-track { flex:1; height:16px; position:relative; background:rgba(255,255,255,0.02); border-radius:3px; border:1px solid rgba(255,255,255,0.03); }
+.wf-block { position:absolute; height:100%; border-radius:3px; min-width:4px; transition: all .5s ease; box-shadow: 0 0 8px currentColor; opacity: 0.85; }
+.wf-block:hover { opacity: 1; }
+.wf-arrow { position:absolute; top:50%; right:-5px; width:0; height:0; border-top:4px solid transparent; border-bottom:4px solid transparent; border-left:5px solid; transform:translateY(-50%); }
+
+/* ══════════════ COMMS LOG ══════════════ */
+.comms-line { display:flex; gap:6px; padding:3px 0; font-size:11px; line-height:1.4; transition: background 0.15s; border-radius: 2px; padding-left: 4px; padding-right: 4px; }
+.comms-line:hover { background: rgba(255,255,255,0.02); }
+.comms-tag { flex-shrink:0; padding:1px 5px; border-radius:3px; font-size:9px; font-weight:700; letter-spacing:0.02em; }
+.comms-ts { flex-shrink:0; color:#5c6080; font-size:10px; }
+.comms-msg { color:#b0b4c8; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+
+/* ══════════════ MAP VIGNETTE ══════════════ */
+.map-vignette {
+  pointer-events:none;
+  background:
+    linear-gradient(to right, var(--bg) 0%, transparent 4%, transparent 96%, var(--bg) 100%),
+    linear-gradient(to bottom, var(--bg) 0%, transparent 4%, transparent 96%, var(--bg) 100%);
+  border: 1px solid rgba(255,109,0,0.1);
+  border-radius:4px;
+  box-shadow: inset 0 0 60px rgba(255,109,0,0.03);
+}
+
+/* ══════════════ PANEL HEADER ══════════════ */
+.panel-hdr {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:7px 10px;
+  border-bottom:1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.025) 0%, rgba(255,255,255,0.005) 100%);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.panel-hdr h3 {
+  font-size:11px;
+  font-weight:700;
+  color:#8890b0;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  margin:0;
+  text-shadow: 0 0 12px rgba(136,144,176,0.15);
+}
+
+/* ══════════════ OVERLAY PANELS ══════════════ */
+.overlay-panel {
+  position:absolute;
+  z-index:20;
+  background: rgba(5,5,16,0.88);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border: 1px solid rgba(255,109,0,0.12);
+  border-radius:10px;
+  padding:14px;
+  min-width:340px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 1px rgba(255,255,255,0.1);
+}
+
+/* ══════════════ GRADIENT BORDERS ══════════════ */
+.gradient-border-top {
+  position: relative;
+}
+.gradient-border-top::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 10%; right: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,109,0,0.3), var(--teal), rgba(255,109,0,0.3), transparent);
+}
+
+/* ══════════════ RIGHT PANEL GLASS ══════════════ */
+.right-panel {
+  background: linear-gradient(180deg, rgba(12,14,26,0.95) 0%, rgba(8,10,20,0.98) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow: hidden;   /* prevent child content from expanding past flex-basis */
+  min-width: 0;       /* classic flexbox fix — allows shrinking below content size */
+}
+
+/* ══════════════ INJECT BAR ══════════════ */
+.inject-bar {
+  background: linear-gradient(180deg, rgba(10,12,22,0.95) 0%, rgba(8,10,18,0.98) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255,109,0,0.08);
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+}
+.inject-input {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s ease;
+}
+.inject-input:focus {
+  border-color: rgba(255,109,0,0.3);
+  box-shadow: 0 0 12px rgba(255,109,0,0.08);
+  background: rgba(255,255,255,0.05);
+}
+.inject-btn {
+  background: linear-gradient(135deg, #ff6d00 0%, #ff9100 100%);
+  box-shadow: 0 2px 12px rgba(255,109,0,0.3), 0 0 1px rgba(255,255,255,0.2) inset;
+  transition: all 0.25s ease;
+}
+.inject-btn:hover {
+  box-shadow: 0 4px 20px rgba(255,109,0,0.5), 0 0 1px rgba(255,255,255,0.3) inset;
+  transform: translateY(-1px);
+}
+.inject-btn:active { transform: translateY(0); }
+
+/* ══════════════ LEGEND GLASS ══════════════ */
+.legend-glass {
+  background: rgba(5,5,16,0.85);
+  backdrop-filter: blur(20px) saturate(1.4);
+  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  border: 1px solid rgba(255,109,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+}
+
+/* ══════════════ STATUS BADGES ══════════════ */
+.badge-connected {
+  background: rgba(16,185,129,0.12);
+  border: 1px solid rgba(16,185,129,0.2);
+  color: #34d399;
+  box-shadow: 0 0 8px rgba(16,185,129,0.1);
+}
+.badge-operational {
+  background: rgba(255,109,0,0.1);
+  border: 1px solid rgba(255,109,0,0.2);
+  color: #ff6d00;
+  box-shadow: 0 0 8px rgba(255,109,0,0.08);
+}
+.badge-disconnected {
+  background: rgba(239,68,68,0.12);
+  border: 1px solid rgba(239,68,68,0.2);
+  color: #f87171;
+  box-shadow: 0 0 8px rgba(239,68,68,0.1);
+}

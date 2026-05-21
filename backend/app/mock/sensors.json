@@ -1,0 +1,24 @@
+{
+  "metadata": {"source": "mock_lesco_sensors", "note": "SYNTHETIC DATA"},
+  "timestamp": "2026-05-12T14:30:00+05:00",
+  "grid_zones": {
+    "walled_city": {"voltage_v": 195, "nominal_v": 220, "voltage_drop_pct": 11.4, "status": "stressed", "load_pct": 98, "transformer_temp_c": 92, "last_outage": "2026-05-12T06:00:00+05:00", "outage_duration_hrs": 8},
+    "misri_shah": {"voltage_v": 185, "nominal_v": 220, "voltage_drop_pct": 15.9, "status": "critical_drop", "load_pct": 105, "transformer_temp_c": 98, "last_outage": null, "outage_duration_hrs": 0},
+    "shahdara": {"voltage_v": 200, "nominal_v": 220, "voltage_drop_pct": 9.1, "status": "stressed", "load_pct": 92, "transformer_temp_c": 85, "last_outage": null, "outage_duration_hrs": 0},
+    "baghbanpura": {"voltage_v": 205, "nominal_v": 220, "voltage_drop_pct": 6.8, "status": "normal", "load_pct": 85, "transformer_temp_c": 78, "last_outage": null, "outage_duration_hrs": 0},
+    "dha_phase_5": {"voltage_v": 0, "nominal_v": 220, "voltage_drop_pct": 100, "status": "outage", "load_pct": 0, "transformer_temp_c": 45, "last_outage": "2026-05-12T14:50:00+05:00", "outage_duration_hrs": 0},
+    "gulberg_iii": {"voltage_v": 0, "nominal_v": 220, "voltage_drop_pct": 100, "status": "outage", "load_pct": 0, "transformer_temp_c": 42, "last_outage": "2026-05-12T14:55:00+05:00", "outage_duration_hrs": 0},
+    "model_town": {"voltage_v": 190, "nominal_v": 220, "voltage_drop_pct": 13.6, "status": "stressed", "load_pct": 95, "transformer_temp_c": 88, "last_outage": null, "outage_duration_hrs": 0},
+    "cantt": {"voltage_v": 210, "nominal_v": 220, "voltage_drop_pct": 4.5, "status": "normal", "load_pct": 75, "transformer_temp_c": 72, "last_outage": null, "outage_duration_hrs": 0}
+  },
+  "temperature_sensors": {
+    "walled_city_bhati": {"temp_c": 49.1, "humidity_pct": 38, "heat_index": 55.2, "sensor_id": "TS_WC_001"},
+    "walled_city_mochi": {"temp_c": 48.5, "humidity_pct": 40, "heat_index": 54.0, "sensor_id": "TS_WC_002"},
+    "misri_shah_main": {"temp_c": 47.8, "humidity_pct": 42, "heat_index": 53.1, "sensor_id": "TS_MS_001"},
+    "shahdara_center": {"temp_c": 47.0, "humidity_pct": 44, "heat_index": 52.0, "sensor_id": "TS_SH_001"},
+    "dha_phase5_park": {"temp_c": 44.2, "humidity_pct": 35, "heat_index": 47.5, "sensor_id": "TS_DH_001"},
+    "gulberg_iii_main": {"temp_c": 43.8, "humidity_pct": 36, "heat_index": 47.0, "sensor_id": "TS_GB_001"},
+    "model_town_park": {"temp_c": 43.0, "humidity_pct": 38, "heat_index": 46.2, "sensor_id": "TS_MT_001"},
+    "cantt_mall_road": {"temp_c": 43.5, "humidity_pct": 37, "heat_index": 46.8, "sensor_id": "TS_CT_001"}
+  }
+}
